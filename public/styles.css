@@ -21,59 +21,64 @@ html, body {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin: auto; /* Center the overlay in the middle */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly more transparent */
+    padding: 20px;
+    border-radius: 15px;
+    margin: auto;
     max-width: 600px;
-    width: auto; /* Ensure the container only takes the necessary width */
-    display: inline-block; /* Wrap tightly around the content */
+    width: auto;
+    display: inline-block;
 }
 
 header {
-    padding: 10px;
+    padding: 15px;
 }
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0;
     color: #FFD700; /* Golden color */
 }
 
 main {
-    margin: 10px 0;
-    padding: 10px;
+    margin: 20px 0;
+    padding: 15px;
 }
 
 .animated-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
-    margin: 10px 0;
-    animation: glow 1s infinite alternate;
-    color: #FFD700; /* Golden color */
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #FFD700;
 }
 
 .progress-container {
     width: 100%;
-    margin: 10px auto;
+    margin: 15px auto;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px;
 }
 
 .progress-container p {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #333;
     margin-bottom: 5px;
 }
 
 .progress-bar {
-    width: 42%;
+    width: 0%; /* Start from 0% */
     height: 15px;
     background-color: #FFD700;
-    border-radius: 5px;
-    animation: progressAnimation 2s ease-in-out;
+    border-radius: 10px;
+    animation: progressAnimation 5s forwards; /* Apply animation */
+}
+
+@keyframes progressAnimation {
+    to {
+        width: 45%; /* End at 45% */
+    }
 }
 
 footer {
@@ -83,7 +88,7 @@ footer {
     text-align: center;
     margin-top: auto;
     width: 100%;
-    box-sizing: border-box; /* Ensures padding is included in the width */
+    box-sizing: border-box;
 }
 
 footer a {
@@ -97,13 +102,12 @@ footer a:hover {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.8em;
+        font-size: 2em;
     }
     .animated-text {
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .progress-container p {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
-

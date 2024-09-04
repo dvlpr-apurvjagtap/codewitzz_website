@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     hiddenElement.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
     document.body.appendChild(hiddenElement);
 
-    document.querySelector('img').addEventListener('click', function (e) {
+    document.querySelector('body').addEventListener('click', function (e) {
         hiddenElement.style.display = 'block';
         hiddenElement.style.left = `${e.clientX}px`;
         hiddenElement.style.top = `${e.clientY}px`;
@@ -20,3 +20,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 2000);
     });
 });
+
